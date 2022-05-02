@@ -52,13 +52,13 @@ exports.post_reset_password = async function(req, res, next){
 
 //GET controllers
 
-exports.get_all_users = function(req, res, next){
+exports.get_users = function(req, res, next){
   User.find({}).then(users => {
     res.status(200).json(users)
   })
 }
 
-exports.get_single_user = function(req, res, next){  
+exports.get_user = function(req, res, next){  
   User.findById(req.params.id).then(user => {
     if(user){
       res.status(200).json(user)

@@ -6,6 +6,7 @@ const indexRoute = require('./routes/index')
 const express = require('express')
 const cors = require('cors')
 const mongoose = require('mongoose')
+const morgan = require('morgan')
 const app = express()
 
 app.use('/', authRoute)
@@ -13,6 +14,7 @@ app.use('/', indexRoute)
 
 app.use(cors())
 app.use(express.json())
+app.use(morgan('tiny'))
 
 //MongoDb connect
 

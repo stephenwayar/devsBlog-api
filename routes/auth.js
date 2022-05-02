@@ -14,8 +14,8 @@ router.post('/api/reset_password', AuthController.post_reset_password)
 
 //GET routes
 
-router.get('/api/users', AuthController.get_all_users)
+router.get('/api/users', AuthController.get_users)
 
-router.get('/api/users/:id', AuthController.get_single_user)
+router.get('/api/users/:id', AuthController.get_user)
 
 module.exports = router
